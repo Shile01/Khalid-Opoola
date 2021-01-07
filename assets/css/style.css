@@ -1,7 +1,3 @@
-/* html {
-  height: 100%;
-} */
-
 ul {
   list-style: none;
 }
@@ -14,7 +10,7 @@ a {
 img {
   max-width: 100%;
   max-height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 }
 
 .br-50 {
@@ -39,6 +35,7 @@ body {
   background: #fff;
   line-height: 1.5;
   word-spacing: 2px;
+  letter-spacing: 1px;
   font-size: 1.15rem;
   /* display: flex;
   flex-direction: column;
@@ -140,6 +137,13 @@ li,
   outline: none;
 }
 
+.intro-image {
+  width: 130px;
+  height: 130px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 @media screen and (max-width: 959px) {
   .hamburger {
     display: block;
@@ -156,6 +160,7 @@ li,
     width: 30px;
     height: 3px;
     background: #000;
+    border-radius: 100px;
     margin: 5px;
     transition: all 0.3s ease;
   }
@@ -185,6 +190,7 @@ li,
   .toggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
     background-color: white;
+    border-radius: 100px;
   }
 
   .toggle .line2 {
@@ -195,6 +201,7 @@ li,
   .toggle .line3 {
     transform: rotate(45deg) translate(-5px, -6px);
     background-color: white;
+    border-radius: 100px;
   }
 }
 
@@ -222,23 +229,22 @@ li,
 
 .technologies .flex {
   flex-wrap: wrap;
+  gap: 30px;
 }
 
 .card {
   background-color: #fff;
-  border-radius: 10px;
+  border-radius: 20px 0 10px;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   padding: 20px;
-  /* margin: 10px; */
-  /* width: 150px; */
-  width: 130px;
+  width: 140px;
   height: 200px;
-  transition: transform 250ms ease-in;
+  transition: transform 1s ease;
 }
 
 .card:hover,
 .card:focus {
-  transform: translateY(-5px);
+  transform: translateY(-10px);
 }
 
 .technologies img {
@@ -273,7 +279,8 @@ li,
 }
 
 .project-image img {
-  border-radius: 10px;
+  border-radius: 0 10px;
+  display: block;
 }
 
 .project__info,
@@ -292,12 +299,12 @@ li,
   border: 1px solid #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
   border: 1px solid transparent;
-  transition: transform 0.2s ease;
+  transition: transform 1s ease;
 }
 
 .social__links:hover,
 .social__links:focus {
-  transform: translateY(-2px);
+  transform: translateY(-5px);
   outline: none;
 }
 
