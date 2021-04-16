@@ -14,3 +14,7 @@ link.addEventListener('click' , () => {
 // Hamburger Animation
 hamburger.classList.toggle("toggle");
 });
+
+
+const date = new Date();
+document.getElementById('year').innerHTML = date.getFullYear();
