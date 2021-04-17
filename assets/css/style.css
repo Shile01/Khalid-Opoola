@@ -101,9 +101,7 @@ li,
 }
 
 .nav__link:hover,
-.nav__link:focus,
-.footer a:hover,
-.footer a:focus {
+.nav__link:focus {
   outline: none;
 }
 
@@ -113,8 +111,7 @@ li,
   color: #fff;
 }
 
-.nav__link::after,
-.footer a::after {
+.nav__link::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -130,9 +127,7 @@ li,
 }
 
 .nav__link:hover::after,
-.nav__link:focus::after,
-.footer a:hover::after,
-.footer a:focus::after {
+.nav__link:focus::after {
   transform: scaleX(1);
   transform-origin: left;
   outline: none;
@@ -240,6 +235,10 @@ li,
   padding: 15px 10px;
 }
 
+.personal-info .about_info b {
+  border-bottom: 1px solid;
+}
+
 .technologies .flex {
   flex-wrap: wrap;
   /* gap: 30px; */
@@ -253,7 +252,7 @@ li,
 .card {
   background-color: #fff;
   border-radius: 20px 0 10px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.2);
   padding: 20px;
   width: 140px;
   height: 200px;
@@ -334,7 +333,11 @@ footer.my-3 {
 }
 
 .footer a {
-  position: relative;
+  transition: 250ms ease;
+}
+
+.footer a:hover {
+  border-bottom: 1px solid;
 }
 
 .copyright {
