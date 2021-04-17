@@ -336,8 +336,10 @@ footer.my-3 {
   transition: 250ms ease;
 }
 
-.footer a:hover {
+.footer a:hover,
+.footer a:focus {
   border-bottom: 1px solid;
+  outline: none;
 }
 
 .copyright {
