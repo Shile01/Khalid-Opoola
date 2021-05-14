@@ -148,7 +148,6 @@ li,
 @media screen and (max-width: 959px) {
   .hamburger {
     display: block;
-    /* border: 1px solid black; */
     position: absolute;
     display: grid;
     cursor: pointer;
@@ -196,13 +195,13 @@ li,
   }
 
   .toggle .line1 {
-    transform: rotate(135deg);
+    transform: rotate(-45deg) translate(-6px, 7px);
     background-color: white;
     border-radius: 100px;
   }
 
   .toggle .line3 {
-    transform: rotate(-135deg) translate(5px, 5px);
+    transform: rotate(45deg) translate(2px, 1px);
     background-color: white;
     border-radius: 100px;
   }
