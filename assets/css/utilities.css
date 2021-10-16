@@ -26,13 +26,21 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
-  /* gap: 20px; */
+  gap: 1.5rem;
 }
 
-.flex > * {
-  margin: 20px;
-  /* border: 1px solid black; */
-}
+/* .flex > * {
+  margin: 1.25rem;
+  border: 1px solid black;
+} */
+
+/* .projects .flex > * {
+  margin: 0;
+} */
+
+/* .projects .flex > * + * {
+  margin: 1.25rem 0;
+} */
 
 .grid {
   display: grid;
@@ -57,8 +65,8 @@ html {
 .btn {
   display: inline-block;
   border: 1px solid currentColor;
-  padding: 0.7rem 1.2rem;
-  font-size: 0.95rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
   cursor: pointer;
   position: relative;
   border-radius: 7px 0;
@@ -87,11 +95,15 @@ html {
 }
 
 .btn:hover,
-.btn:focus,
+.btn:focus {
+  color: #fff;
+  outline: none;
+}
+
 .resume:hover,
 .resume:focus {
-  color: #000;
   outline: none;
+  color: #000;
 }
 
 .btn:hover::after,
@@ -111,11 +123,12 @@ html {
 .btn-inactive:hover,
 .btn-inactive:focus {
   outline: none;
+  pointer-events: none;
 }
 
 .resume {
   display: inline-block;
-  padding: 0.5rem 1.2rem;
+  padding: 0.5rem 1.25rem;
   border: 1px solid #fff;
   border-radius: 7px 0;
   position: relative;
@@ -202,17 +215,7 @@ html {
     width: 0;
   }
   to {
-    width: 11ch;
-  }
-}
-
-@keyframes blink-caret {
-  from,
-  to {
-    border-color: transparent;
-  }
-  50% {
-    border-color: black;
+    width: 14ch;
   }
 }
 
