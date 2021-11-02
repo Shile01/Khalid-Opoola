@@ -18,7 +18,7 @@ img {
 }
 
 .br-8 {
-  border-radius: 8px;
+  border-radius: 0.5rem;
 }
 
 .logo,
@@ -28,7 +28,17 @@ img {
 .projects,
 .contact {
   padding: 0 20px;
-  padding-top: 15px;
+}
+
+.logo {
+  padding-top: 0.5rem;
+}
+
+.about,
+.technologies,
+.projects,
+.contact {
+  padding-top: 1rem;
 }
 
 body {
@@ -90,7 +100,7 @@ li,
   position: relative;
   animation: slideInFromTop 1s ease;
   align-items: center;
-  /* padding-top: 15px; */
+  padding-top: 15px;
 }
 
 .logo {
@@ -99,7 +109,12 @@ li,
   letter-spacing: 2px;
   white-space: nowrap;
   align-self: flex-start;
+  /* letter-spacing: 8px; */
   /* border: 1px solid rgb(114, 30, 30) */
+}
+
+.header .grid {
+  align-items: center;
 }
 
 .nav__link {
@@ -108,7 +123,6 @@ li,
   font-size: 1.125rem;
   padding-bottom: 1px;
   color: #fff;
-  position: relative;
 }
 
 .nav__link:hover,
@@ -162,7 +176,7 @@ li,
     display: grid;
     cursor: pointer;
     right: 3%;
-    top: 65%;
+    top: 69%;
     height: 12px;
     transform: translate(-5%, -50%);
     z-index: 5;
@@ -383,16 +397,61 @@ footer.my-3 {
 @media screen and (min-width: 960px) {
   .logo {
     grid-column: 1/ 3;
+    padding: 0.5rem 1.25rem;
+  }
+
+  .nav__items:not(:last-of-type) {
+    padding: 0.5rem 1.25rem;
   }
 
   .nav-list {
     display: flex;
-    gap: 30px;
+    /* gap: 30px; */
+    align-content: center;
     font-size: 1.1rem;
-    justify-content: center;
-    align-items: center;
     grid-column: 3 / -1;
+    /* width: 100%; */
+  }
+
+  .nav__link::after {
+    display: none;
+  }
+
+  .navs {
+    position: relative;
+  }
+
+  .navs:hover {
+    background: hsl(0, 0%, 95%);
+    /* border-radius: 0.5rem 0 0.5rem 0; */
+  }
+
+  .navs::after {
+    content: "";
+    position: absolute;
     width: 100%;
+    height: 2px;
+    background-color: currentColor;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: scaleX(0);
+    border-radius: 0.5rem;
+    transform-origin: right;
+    transition: transform 250ms ease;
+  }
+
+  .navs:hover::after,
+  .navs:focus::after {
+    transform: scaleX(1);
+    transform-origin: left;
+    outline: none;
+  }
+
+  .nav__items:last-of-type {
+    border-bottom: 1px solid black;
+    border-radius: 0 8px 8px 0;
   }
 
   .resume {
