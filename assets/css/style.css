@@ -323,7 +323,17 @@ li,
 }
 
 .projects > .project-tile + .project-tile {
-  margin-top: 2rem;
+  margin-top: 2.8rem;
+}
+
+.fm-link {
+  color: hsl(198, 60%, 50%);
+}
+
+.fm-link:hover,
+.fm-link:focus,
+.fm-link:active {
+  border-bottom: 1px solid currentColor;
 }
 
 .projects .flex {
